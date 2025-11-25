@@ -66,7 +66,7 @@ export function useInitialMessages({ eventId }: UseEventChatProps) {
           id: msg.id,
           content: msg.message,
           createdAt: msg.created_at,
-          user: msg.username,
+          user: { name: msg.username },
           isOwnMessage: msg.user_id === user?.id,
         }));
         setInitialMessages(formattedMessages);
